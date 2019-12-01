@@ -1,8 +1,5 @@
 conda
-conda-build
-conda-verify
 Flask
-Flask-Cors
 Keras
 Keras-Applications
 Keras-Preprocessing
