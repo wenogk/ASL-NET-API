@@ -11,4 +11,3 @@ tensorflow
 h5py
 matplotlib
 gunicorn
-cv2
