@@ -28,7 +28,7 @@ def run():
         npimg = np.fromstring(f, np.uint8)
         #f= Image.open(io.BytesIO(f))
         img = cv2.imdecode(npimg, cv2.IMREAD_COLOR) # Reads image and returns np.array
-        img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) # Converts into the corret colorspace (GRAY)
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) # Converts sinto the corret colorspace (GRAY)
         img = cv2.resize(img, (320, 120)) # Reduce image size so training can be faster
         x = np.array(img, dtype="uint8")
         x = np.expand_dims(x, axis=0)
