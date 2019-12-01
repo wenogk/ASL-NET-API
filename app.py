@@ -5,7 +5,7 @@ from tensorflow import keras
 import h5py
 from keras.preprocessing import image
 import numpy as np
-import opencv-python as cv2
+import cv2
 import matplotlib.pyplot as plt
 import io
 from PIL import Image
