@@ -10,3 +10,4 @@ requests
 tensorflow
 h5py
 matplotlib
+gunicorn
