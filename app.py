@@ -9,6 +9,7 @@ import cv2
 import matplotlib.pyplot as plt
 import io
 from PIL import Image
+from flask import render_template
 app = Flask(__name__)
 
 
@@ -31,23 +32,4 @@ def index():
         alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ','del','idk']
         indexVal =np.where(array[0] == np.amax(array[0]))
         return (alphabet[indexVal[0][0]])
-    return '''
-    <!doctype html>
-    <head>
-    <title>ASL-NET</title>
-    <link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous>
-    </head>
-
-    <div class =container>
-    <div class =starter-template>
-    <h1>ASL-NET</h1>
-    <p class =lead>Intepreting sign language through deep learning.</p>
-    <p>D. Romeno Wenogk Fernando, Takumi Miyawaki, Munachiso Nwadike</p>
-    <form method=post enctype=multipart/form-data>
-      <input type=file name=the_file>
-      <input type=submit value=Upload>
-    </form>
-    </div>
-    </div>
-
-    '''
+    return render_template('index.html')
