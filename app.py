@@ -39,10 +39,21 @@ def run():
         return (alphabet[indexVal[0][0]])
     return '''
     <!doctype html>
-    <title>Upload new File</title>
-    <h1>Upload new File</h1>
+    <head>
+    <title>ASL-NET</title>
+    <link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous>
+    </head>
+    <body>
+    <div class =container>
+    <div class =starter-template>
+    <h1>ASL-NET</h1>
+    <p class =lead>Intepreting sign language through deep learning.</p>
+    <p>D. Romeno Wenogk Fernando, Takumi Miyawaki, Munachiso Nwadike</p>
     <form method=post enctype=multipart/form-data>
       <input type=file name=the_file>
       <input type=submit value=Upload>
     </form>
+    </div>
+    </div>
+    </body>
     '''
