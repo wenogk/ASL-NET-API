@@ -29,7 +29,7 @@ def index():
         x = np.expand_dims(x, axis=0)
         x = np.expand_dims(x, axis=4)
         array = model.predict(x)
-        alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ','del','idk']
+        alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','space','delete','none']
         indexVal =np.where(array[0] == np.amax(array[0]))
         return (alphabet[indexVal[0][0]])
     return render_template('index.html')
