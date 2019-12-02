@@ -12,14 +12,8 @@ from PIL import Image
 app = Flask(__name__)
 
 
-
-@app.route('/')
+@app.route('/', methods=["GET","POST"])
 def index():
-    return 'Index Page'
-
-
-@app.route('/run', methods=["GET","POST"])
-def run():
     if(request.method=='POST'):
         model = keras.models.load_model('asl.h5')
         #model.make_predict_function()
@@ -43,7 +37,7 @@ def run():
     <title>ASL-NET</title>
     <link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous>
     </head>
-    <body>
+
     <div class =container>
     <div class =starter-template>
     <h1>ASL-NET</h1>
@@ -55,5 +49,5 @@ def run():
     </form>
     </div>
     </div>
-    </body>
+
     '''
